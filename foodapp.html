@@ -12,17 +12,6 @@
   <h1>Home</h1>
 </template>
 
-<template name="One">
-  {{> Nav}}
-
-  <h1>Page One</h1>
-</template>
-
-<template name="Two">
-  {{> Nav}}
-
-  <h1>Page Two</h1>
-</template>
 
 <template name="Nav">
   	<ul>
@@ -30,15 +19,12 @@
 	      <a href="/">Home</a>
 	    </li>
 	    <li>
-	      <a href="/one">Page One</a>
+	      <a href="/dashboard">Dashboard</a>
 	    </li>
 	    <li>
-	      <a href="/two">Page Two</a>
+	    	{{> loginButtons}}
 	    </li>
   	</ul>
-  	<ul>
-		{{>entryAccountButtons}}
-	</ul>
 </template>
 
 <template name="Dashboard">
