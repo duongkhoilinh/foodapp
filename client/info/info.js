@@ -1,6 +1,6 @@
 Template.Info.onRendered(function() {
 	
-	$("#logo-upload").fileinput({
+	$("#logo-input").fileinput({
       uploadUrl: "http://localhost/site/file-upload-batch",
       allowedFileExtensions: ["jpg", "png", "gif"],
       minImageWidth: 50,
@@ -32,12 +32,18 @@ Template.Info.onRendered(function() {
 });
 
 Template.Info.events({
-	'click #btn-next-menu':function(){
+	'click #btn-next-menu': function(){
 		$('#next-menu a').trigger('click');
 	  	window.scrollTo(0, 0);
 	},
 
-	'change #logo-upload': function() {
-		readUrl(this);
-	}
+  'click #form-group-logo .file-drop-zone':  function() {
+    $('#logo-input').trigger('click');
+  },
+
+  'click #btn-add-image': function() {
+    console.log('asdasd');
+    var imgShow = $('#form-add-image .file-preview-frame').html();
+    $('.show-image .row').append(imgShow);
+  }
 })

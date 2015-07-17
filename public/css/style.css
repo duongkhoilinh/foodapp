@@ -429,3 +429,27 @@ a:-moz-any-link:focus {
 	color: #fff;
 	border: 1px solid #283f58;
 }
+.tab-pane {
+    margin-top: 20px;
+}
+.tab-basic #form-group-logo .file-preview,
+.tab-menu .file-preview  {
+    max-width: 300px;
+    max-height: 300px;
+}
+.tab-basic .file-drop-zone-title,
+.tab-menu .file-drop-zone-title {
+    font-size: 18px;
+}
+.tab-basic #form-group-logo .file-actions,
+.tab-basic #form-group-logo .input-group,
+.tab-menu .file-caption {
+    display: none;
+}
+.file-preview-frame {
+    border: none;
+    box-shadow: 0px 0px 3px 1px #ccc;
+}
+.file-preview-frame:hover {
+    box-shadow: 0px 0px 3px 1px #ccc;
+}
