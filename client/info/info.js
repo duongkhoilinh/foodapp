@@ -1,24 +1,5 @@
 Template.Info.onRendered(function() {
-	// $('#form-group-menu .file-drop-zone').click(function() {
-	//   $('#logo-upload').trigger('click');
-	// });
-
-	// $('#form-group-slide .file-drop-zone').click(function() {
-	//   $('#slide-upload').trigger('click');
-	// });
-
-	// setTimeout(function() {
-	//     $("#logo-upload").fileinput({
-	//       uploadUrl: "http://localhost/site/file-upload-batch",
-	//       allowedFileExtensions: ["jpg", "png", "gif"],
-	//       minImageWidth: 50,
-	//       minImageHeight: 50
-	//     });
-	// },10000)
-	// var loadFile = function(event) {
-	// 	var output = document.getElementById('output');
-	// 	output.src = URL.createObjectURL(event.target.files[0]);
-	// };
+	
 	$("#logo-upload").fileinput({
       uploadUrl: "http://localhost/site/file-upload-batch",
       allowedFileExtensions: ["jpg", "png", "gif"],
@@ -26,6 +7,28 @@ Template.Info.onRendered(function() {
       minImageHeight: 50
   	});
 
+  	$("#slide-upload").fileinput({
+      uploadUrl: "http://localhost/site/file-upload-batch",
+      allowedFileExtensions: ["jpg", "png", "gif"],
+      minImageWidth: 10,
+      minImageHeight: 10
+  	});
+
+  	$("#menu-item").fileinput({
+      uploadUrl: "http://localhost/site/file-upload-batch",
+      allowedFileExtensions: ["jpg", "png", "gif"],
+      minImageWidth: 10,
+      minImageHeight: 10,
+      initialPreviewConfig: [
+        {
+          caption: 'desert.jpg', 
+          width: '120px', 
+          url: 'http://localhost/avatar/delete', // server delete action 
+          key: 100, 
+          extra: {id: 100}
+        }
+      ]
+  	});
 });
 
 Template.Info.events({
