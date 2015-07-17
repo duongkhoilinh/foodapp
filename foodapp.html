@@ -1,34 +1,58 @@
 <head>
-  <title>basic</title>
+  	<title>Food App</title>
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/fileinput.min.css" type="text/css" rel="stylesheet">	
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
 	
 </body>
 
-<template name="Home">
-  {{> Nav}}
-
-  <h1>Home</h1>
-</template>
-
-
 <template name="Nav">
-  	<ul>
-	    <li>
-	      <a href="/">Home</a>
-	    </li>
-	    <li>
-	      <a href="/dashboard">Dashboard</a>
-	    </li>
-	    <li>
-	    	{{> loginButtons}}
-	    </li>
-  	</ul>
+  	<nav id="top-nav" class="navbar navbar-fixed-top navbar-default" role="navigation">
+	   <div class="container">
+	      <!-- Brand and toggle get grouped for better mobile display -->
+	      <div class="navbar-header">
+	         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	         </button>
+	         <a class="navbar-brand logo-full" href="/">
+	            <i class="icon-lighting"></i>
+	            <span>Food App</span>
+	         </a>
+	         <a class="navbar-brand logo-mobile" href="/">
+	            <i class="icon-lighting"></i>
+	         </a>
+	      </div>
+	      <!-- Collect the nav links, forms, and other content for toggling -->
+	      <div class="collapse navbar-collapse" id="navbar">
+	         <ul class="nav navbar-nav">
+	            <li>
+	               <a href="/info">Info</a>
+	            </li>
+	         </ul>
+	      </div>
+	      <!-- /.navbar-collapse -->
+
+	      {{#unless refToLoginPage}}
+	      <ul id="nav-right" class="nav navbar-nav navbar-right">
+	         <li><a>{{> loginButtons}}</a></li>
+	      </ul>
+	      {{/unless}}
+	   </div>
+	   <!-- /.container-fluid -->
+	</nav>
 </template>
 
-<template name="Dashboard">
-  {{> Nav}}
-
-  <h1>Page Dashboard</h1>
+<template name="Script">
+		
 </template>
+
+
+
+
+

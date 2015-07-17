@@ -12,3 +12,5 @@ accounts-password
 mizzao:bootstrap-3
 iron:router
 ian:accounts-ui-bootstrap-3
+mizzao:jquery-ui
+twbs:bootstrap

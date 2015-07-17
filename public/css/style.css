@@ -1,0 +1,431 @@
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    background: #fff;
+    color: #4c5258;
+    font-weight: normal;
+    margin-top: 50px;
+}
+
+ul,li {
+    list-style: none;
+}
+
+.navbar-nav li a {
+    color: #c1d0df;
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    padding-top: 0;
+}
+
+.navbar-brand img {
+    width: 91%;
+}
+
+button:focus,button:active {
+    outline: 0 !important;
+}
+img {
+    width: 100%;
+}
+#top-nav {
+    background-color: #283f58 !important;
+}
+
+#top-nav .container {
+    position: relative;
+}
+
+#top-nav .logo-full {
+    display: block;
+    color: #fff;
+    background-color: #f03b43;
+    text-align: center;
+    padding: 10px 20px;
+    margin-right: 25px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#top-nav .logo-full i {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+#top-nav .logo-full span {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-family: Montserrat-Bold, sans-serif;
+    padding-top: 6px;
+}
+
+#top-nav .logo-mobile {
+    display: none;
+    color: #fff;
+    background-color: #f03b43;
+    text-align: center;
+    padding: 10px 11px;
+    margin-right: 25px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#top-nav .logo-mobile i {
+    font-size: 30px;
+}
+
+#top-nav .navbar-nav li:hover,#top-nav .navbar-nav li.active {
+    background-color: #37516d;
+}
+
+#top-nav .navbar-nav>li>a {
+    color: #c1d0df;
+    font-size: 14px;
+    font-family: Montserrat-Regular;
+}
+
+#top-nav .navbar-nav>li>a:hover {
+    color: #c1d0df;
+}
+
+.navbar-right {
+    padding: 0px 22px 0 7px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.navbar-right:hover {
+    background-color: #37516d;
+}
+
+.navbar-right #login-dropdown-list.open>a {
+    color: #c1d0df !important;
+}
+
+.navbar-right #login-dropdown-list.open>a:hover {
+    color: #c1d0df !important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Montserrat-Bold, sans-serif;
+    color: #283f58;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 16px;
+    color: #4c5258;
+    line-height: 26px;
+}
+
+a {
+    color: #8ba1b9;
+}
+
+a:active,a:focus,a:hover {
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+a:-moz-any-link:focus {
+    outline: none;
+}
+
+.well {
+    background: #fafafa;
+    padding: 10px;
+}
+
+.leftalign {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.rightalign {
+    float: right;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#login-dropdown-list.dropdown {
+    top: 0px !important;
+    left: initial;
+    right: 0px;
+}
+
+#login-dropdown-list.dropdown input {
+    border-radius: 0;
+    background: #edf0f3;
+    box-shadow: none;
+    border: none;
+    height: 36px;
+    width: 100%;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu {
+    min-width: 336px;
+    padding: 15px 26px 26px 23px;
+    position: absolute;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    right: -27px;
+    top: 35px;
+    box-shadow: 0px 0px 3px -1px #000000;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 13%;
+    border-left: 7.5px solid rgba(240, 0, 0, 0);
+    border-right: 7.5px solid transparent;
+    border-bottom: 5px solid #DADADA;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu:after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: 13%;
+    border-left: 7px solid rgba(240, 0, 0, 0);
+    border-right: 7px solid transparent;
+    border-bottom: 5px solid #FFF;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu input {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: #edf0f3;
+    color: #90979e;
+    font-size: 12px;
+    margin-top: 9px;
+    font-family: Montserrat-Regular;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .or {
+    text-align: left;
+    border-top: 1px solid #e9edf0;
+    margin-top: 70px;
+    padding-top: 16px;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu label {
+    color: #283f58;
+    padding: 0;
+    font-size: 14px;
+    display: block;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu [class^="btn-"],#login-dropdown-list.dropdown .dropdown-menu [class*="btn-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .login-button {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: initial;
+    position: absolute;
+    color: #c4c7c9;
+    font-size: 40px;
+    width: 66px;
+    top: 32px;
+    right: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .login-button:hover {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Google {
+    left: 22px;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Google:before {
+    content: "\e600";
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Google:hover {
+    color: #f03b43;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Dropbox {
+    left: 86px;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Dropbox:before {
+    content: "\e601";
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Dropbox:hover {
+    color: #246ebd;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Box {
+    left: 150px;
+    font-size: 55px;
+    line-height: 40px;
+    width: 70px;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Box:before {
+    content: "\e602";
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Box:hover {
+    color: #0077BD;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Onedrive {
+    font-size: 55px;
+    left: 224px;
+    line-height: 40px;
+    width: 70px;
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Onedrive:before {
+    content: "\e603"
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-Onedrive:hover {
+    color: #0047B4
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-primary,#login-dropdown-list.dropdown .dropdown-menu .btn-default {
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 0;
+    border: none;
+    height: 45px;
+    font-family: Montserrat-Bold
+}
+
+#login-dropdown-list.dropdown .dropdown-menu .btn-default {
+    background: #edf0f3
+}
+
+#login-dropdown-list.dropdown .dropdown-menu #login-buttons-password {
+    background: #f03b43
+}
+
+#login-dropdown-list.dropdown .dropdown-menu #login-buttons-do-change-password:hover,#login-dropdown-list.dropdown .dropdown-menu #login-buttons-logout:hover,#login-dropdown-list.dropdown .dropdown-menu #login-buttons-forgot-password:hover {
+    background-color: #5983b0
+}
+
+#login-dropdown-list.dropdown .dropdown-menu #login-buttons-password:hover {
+    background: #F2666C
+}
+
+#login-dropdown-list.dropdown .dropdown-menu #login-other-options a {
+    text-transform: capitalize;
+    font-size: 12px;
+    color: #283f58;
+    font-family: Montserrat-Regular
+}
+
+#login-dropdown-list.dropdown>a {
+    text-transform: initial;
+    color: #c1d0df !important;
+    position: relative;
+    font-size: 14px
+}
+
+#login-dropdown-list.dropdown>a:hover {
+    text-decoration: none
+}
+
+#login-dropdown-list.dropdown>a span {
+    padding-left: 4px
+}
+
+#login-dropdown-list.dropdown>a:after {
+    content: "";
+    position: absolute;
+    background-image: url(/images/dropdown_icon.png);
+    left: initial;
+    right: -19px;
+    width: 9px;
+    background-size: 9px;
+    height: 5px;
+    top: 7px
+}
+
+#login-dropdown-list.dropdown>a .caret {
+    display: none
+}
+
+.info-page {
+	padding-top: 100px;
+}
+.info-page .nav-tabs {
+	border-bottom: 1px solid #283f58;
+}
+.info-page .nav-tabs li a:hover {
+	background: none;
+	border: 1px solid transparent;
+	border-radius: 0;
+}
+.info-page .nav-tabs li:last-child a {
+	margin-right: 0;
+}
+.info-page .nav-tabs li.active a,
+.info-page .nav-tabs li.active a:hover,
+.info-page .nav-tabs li.active a:focus {
+	background: #283f58;
+	border-radius: 0;
+	color: #fff;
+	border: 1px solid #283f58;
+}

@@ -1,0 +1,80 @@
+<template name="Info">
+  {{> Nav}}
+  <div class="info-page page">
+    <div class="container">
+      <div styles="width: 465.3px;margin: 0 auto;">
+          <h1>Info Page</h1>
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">Basic</a>
+            </li>
+            <li role="presentation" id="next-menu">
+              <a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu</a>
+            </li>
+            <li role="presentation"><a href="#team" aria-controls="team" role="tab" data-toggle="tab">Chief/ Team</a></li>
+            <li role="presentation"><a href="#payment" aria-controls="payment" role="tab" data-toggle="tab">Payment</a></li>
+            <li role="presentation"><a href="#template" aria-controls="template" role="tab" data-toggle="tab">Template</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="basic">
+              <div class="form-group" id="form-group-menu">
+                <label>Logo:</label>
+                <input id="logo-upload" type="file" class="file-loading" accept="image/*" placeholder="LOGO (SELECT FILE, DROP FILE)">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="ADDRESS">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="TAG LINE">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="BUSINESS NAME">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="PHONE NUMBER">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="DELIVERY PERIMETER">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="DELIVERY GUIDLINES">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="SEO DESCRIPTION">
+              </div>
+              <div class="form-group" id="form-group-slide">
+                <label>Slide:</label>
+                <input id="slide-upload" type="file" multiple class="file-loading" accept="image/*">
+              </div>
+              <button id="btn-next-menu" class="btn btn-default btn-primary">Next</button>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="menu">
+              <div class="show-image">
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input id="menu-item" type="file" class="file-loading" accept="image/*">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea class="form-control" rows="10"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="team">
+              
+            </div>
+            <div role="tabpanel" class="tab-pane" id="payment">...d</div>
+            <div role="tabpanel" class="tab-pane" id="template">...d</div>
+          </div>
+        </div>
+        <button class="btn-privary">PUBLISH</button>
+    </div>
+  </div>
+  {{> Script}}
+</template>
