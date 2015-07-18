@@ -163,7 +163,9 @@ a:active,a:focus,a:hover {
 a:-moz-any-link:focus {
     outline: none;
 }
-
+textarea {
+    resize: none;
+}
 .well {
     background: #fafafa;
     padding: 10px;
@@ -407,27 +409,30 @@ a:-moz-any-link:focus {
     display: none
 }
 
-.info-page {
-	padding-top: 100px;
+.page {
+    padding: 50px 0 100px;
+}
+.page h1 {
+    margin-bottom: 40px;
 }
 .info-page .nav-tabs {
-	border-bottom: 1px solid #283f58;
+    border-bottom: 1px solid #283f58;
 }
 .info-page .nav-tabs li a:hover {
-	background: none;
-	border: 1px solid transparent;
-	border-radius: 0;
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 0;
 }
 .info-page .nav-tabs li:last-child a {
-	margin-right: 0;
+    margin-right: 0;
 }
 .info-page .nav-tabs li.active a,
 .info-page .nav-tabs li.active a:hover,
 .info-page .nav-tabs li.active a:focus {
-	background: #283f58;
-	border-radius: 0;
-	color: #fff;
-	border: 1px solid #283f58;
+    background: #283f58;
+    border-radius: 0;
+    color: #fff;
+    border: 1px solid #283f58;
 }
 .tab-pane {
     margin-top: 20px;
@@ -437,14 +442,27 @@ a:-moz-any-link:focus {
     max-width: 300px;
     max-height: 300px;
 }
-.tab-basic .file-drop-zone-title,
-.tab-menu .file-drop-zone-title {
+.file-drop-zone-title {
     font-size: 18px;
+    padding: 83px 10px;
 }
 .tab-basic #form-group-logo .file-actions,
 .tab-basic #form-group-logo .input-group,
-.tab-menu .file-caption {
+.tab-menu .input-group,
+.tab-menu .file-actions,
+.tab-team #image-team-form .input-group,
+.tab-team #image-team-form .file-actions {
     display: none;
+}
+.tab-menu .text-content {
+    width: 63%;
+    display: inline-block;
+    vertical-align: top;
+}
+.tab-menu .image {
+    width: 36%;
+    display: inline-block;
+    vertical-align: middle;
 }
 .file-preview-frame {
     border: none;
@@ -453,3 +471,22 @@ a:-moz-any-link:focus {
 .file-preview-frame:hover {
     box-shadow: 0px 0px 3px 1px #ccc;
 }
+.info-page-content {
+    border: 15px solid #ccc;
+    padding: 10px 20px;
+}
+.btn-publish {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
