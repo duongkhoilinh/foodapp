@@ -5,7 +5,7 @@
       <h1>Info Page</h1>
       <div class="info-page-content">
           <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active">
+            <li role="presentation" class="active" id="next-basic">
               <a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">Basic</a>
             </li>
             <li role="presentation" id="next-menu">
@@ -24,8 +24,10 @@
 
           <!-- Tab panes -->
           <div class="tab-content">
+
+          <!-- Tab Basic -->
             <div role="tabpanel" class="tab-pane tab-basic active" id="basic">
-              <div class="form-group" id="form-group-logo">
+              <div class="form-group" id="logo-form">
                 <label>Logo:</label>
                 <input id="logo-input" type="file" class="file-loading" accept="image/*">
               </div>
@@ -50,35 +52,37 @@
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="SEO DESCRIPTION">
               </div>
-              <div class="form-group" id="form-group-slide">
+              <div class="form-group" id="slide-basic-form">
                 <label>Slide:</label>
-                <input id="slide-upload" type="file" multiple class="file-loading" accept="image/*">
+                <input id="slide-basic-upload" type="file" multiple class="file-loading" accept="image/*">
               </div>
-              <button id="btn-next-menu" class="btn btn-default btn-primary">Next</button>
+              <button id="btn-next-menu" class="btn btn-default btn-primary btn-next">Next</button>
             </div>
+
+            <!-- Tab Menu -->
             <div role="tabpanel" class="tab-pane tab-menu" id="menu">
-              <div class="show-image">
+              <div class="show-images">
                 <h3>Show Image:</h3>
                 <div class="row">
                   
                 </div>
               </div>
-              <div class="form-add-image" id="form-add-image">
+              <div class="add-menu-image-form" id="add-menu-image-form">
                 <div class="row">
                   <div class="col-md-11">
                     <div class="image">
                       <div class="form-group">
-                        <input id="menu-item" type="file" class="file-loading" accept="image/*">
+                        <input id="menu-image-upload" type="file" class="file-loading" accept="image/*">
                       </div>
                     </div>
                     <div class="text-content">
                       <div class="form-group">
                         <label>Description:</label>
-                        <textarea class="form-control" rows="6" id="comment"></textarea>
+                        <textarea class="form-control" rows="6" id="description"></textarea>
                       </div>
                       <div class="form-group">
                         <label>Price:</label>
-                        <input type="text" class="form-control" placeholder="PRICE">
+                        <input type="text" class="form-control" id="price" placeholder="PRICE">
                       </div>
                     </div>
                   </div>
@@ -87,14 +91,16 @@
                   </div>
                 </div>
               </div>
-              <button id="btn-next-team" class="btn btn-default btn-primary">Next</button>
+              <button id="btn-next-team" class="btn btn-default btn-primary btn-next">Next</button>
             </div>
+
+            <!-- Tab Team -->
             <div role="tabpanel" class="tab-pane tab-team" id="team">
               <div class="row">
                 <div class="col-md-12">
                   <div class="image-team-form" id="image-team-form">
                     <div class="form-group">
-                      <input id="image-team" type="file" class="file-loading" accept="image/*">
+                      <input id="team-image-upload" type="file" class="file-loading" accept="image/*">
                     </div>
                     <div class="text-info">
                       <div class="form-group">
@@ -110,18 +116,30 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                   
                 </div>
-                <div class="col-md-6" id="image-team-member-form">
+                <div class="col-md-4" id="team-member-form">
+                  <h3>Members</h3>
                   <div class="form-group">
-                    <input id="image-team-member" type="file" class="file-loading" accept="image/*">
+                    <input id="team-member-upload" type="file" class="file-loading" accept="image/*">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="NAME">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="EXPERIENCE">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="SOCIAL MEDIA ACCOUNT">
                   </div>
                 </div>
               </div>
-              <button id="btn-next-payment" class="btn btn-default btn-primary">Next</button>
+              <button id="btn-next-payment" class="btn btn-default btn-primary btn-next">Next</button>
             </div>
-            <div role="tabpanel" class="tab-pane" id="payment">
+
+            <!-- Tab Payment -->
+            <div role="tabpanel" class="tab-pane tab-payment" id="payment">
               <div class="payback-money">
                 <h3>Payback Money</h3>
                 <div class="form-group">
@@ -143,9 +161,34 @@
                   <input type="text" class="form-control" placeholder="PAY BY CREDIT CARD">
                 </div>
               </div>
-              <button id="btn-next-template" class="btn btn-default btn-primary">Next</button>
+              <button id="btn-next-template" class="btn btn-default btn-primary btn-next">Next</button>
             </div>
-            <div role="tabpanel" class="tab-pane" id="template">...d</div>
+
+            <!-- Tab Template -->
+            <div role="tabpanel" class="tab-pane tab-template" id="template">
+              <div class="row">
+                <div class="col-md-6">
+                  <h3>Business Card</h3>
+                  <div class="form-group business-card-form" id="business-card-form">
+                    <input id="business-card-upload" type="file" class="file-loading" accept="image/*">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h3>Brochure</h3>
+                  <div class="form-group brochure-form" id="brochure-form">
+                    <input id="brochure-upload" type="file" class="file-loading" accept="image/*">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <h3>Explainer Video</h3>
+                  <div class="form-group video-form" id="video-form">
+                    <input id="video-upload" type="file" class="file-loading" accept="image/*">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <button class="btn btn-default btn-primary btn-publish">PUBLISH</button>

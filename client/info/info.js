@@ -3,28 +3,6 @@
 imagesTypes = ['image/png','image/jpeg'];
 
 Template.Info.onRendered(function() {
-	
-	// $("#logo-input").fileinput({
- //      uploadUrl: "http://localhost/site/file-upload-batch",
- //      allowedFileExtensions: ["jpg", "png", "gif"],
- //      minImageWidth: 50,
- //      minImageHeight: 50
- //  	});
-
- //  	$("#slide-upload").fileinput({
- //      uploadUrl: "http://localhost/site/file-upload-batch",
- //      allowedFileExtensions: ["jpg", "png", "gif"],
- //      minImageWidth: 10,
- //      minImageHeight: 10
- //  	});
-
-  	// $("#menu-item").fileinput({
-   //    uploadUrl: "http://localhost/site/file-upload-batch",
-   //    allowedFileExtensions: ["jpg", "png", "gif"],
-   //    minImageWidth: 10,
-   //    minImageHeight: 10,
-  	// });
-
   	$(".file-loading").fileinput({
       uploadUrl: "http://localhost/site/file-upload-batch",
       allowedFileExtensions: ["jpg", "png", "gif"],
@@ -34,42 +12,49 @@ Template.Info.onRendered(function() {
 });
 
 Template.Info.events({
-	'click #btn-next-menu': function(){
-		$('#next-menu a').trigger('click');
+	'click .btn-next': function(e){
+    var atrrID = $(e.currentTarget).attr('id');
+    var id = atrrID.substr(4);
+    console.log(id);
+		$('#'+id + ' a').trigger('click');
 	  	window.scrollTo(0, 0);
 	},
 
-	'click #btn-next-team': function(){
-		$('#next-team a').trigger('click');
-	  	window.scrollTo(0, 0);
-	},
-
-	'click #btn-next-payment': function(){
-		$('#next-payment a').trigger('click');
-	  	window.scrollTo(0, 0);
-	},
-
-	'click #btn-next-template': function(){
-		$('#next-template a').trigger('click');
-	  	window.scrollTo(0, 0);
-	},
-
-	'click #form-group-logo .file-drop-zone':  function() {
+	'click #logo-form .file-drop-zone':  function() {
 	  $('#logo-input').trigger('click');
 	},
 
-	'click #image-team-form .file-drop-zone':  function() {
-	  $('#image-team').trigger('click');
+	'click #team-member-form .file-drop-zone':  function() {
+	  $('#team-member-upload').trigger('click');
 	},
 
-	'click #form-add-image .file-drop-zone':  function() {
-	  $('#menu-item').trigger('click');
-	},
+  'click #add-menu-image-form .file-drop-zone':  function() {
+    $('#menu-image-upload').trigger('click');
+  },
+
+  'click #business-card-form .file-drop-zone':  function() {
+    $('#business-card-upload').trigger('click');
+  },
+
+  'click #brochure-form .file-drop-zone':  function() {
+    $('#brochure-upload').trigger('click');
+  },
+
+  'click #video-form .file-drop-zone':  function() {
+    $('#video-upload').trigger('click');
+  },
 
 	'click #btn-add-image': function() {
-	  console.log('asdasd');
-	  var imgShow = $('#form-add-image .file-preview-frame').html();
-	  $('.show-image .row').append(imgShow);
+	  var img = "<img src='images/image-test.jpg'>";
+	  var imgForm = "<div class='img-form col-md-4'>" + img + "</div>";
+    var description = $('#description').val();
+    var price = $('#description').val()
+    console.log(description + price);
+    var infoForm = "<div class='img-form col-md-8'><p>" + description + "</p><p>" + price +"</p></div>";
+    var showForm = "<div>" + imgForm + infoForm + "</div>";
+    $('.show-images .row').append(showForm);
+    $('#description').val("");
+    $('#price').val("");
 	},
 
 	'change #logo-input': function(e) {

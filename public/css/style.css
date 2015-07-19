@@ -437,7 +437,7 @@ textarea {
 .tab-pane {
     margin-top: 20px;
 }
-.tab-basic #form-group-logo .file-preview,
+.tab-basic #logo-form .file-preview,
 .tab-menu .file-preview  {
     max-width: 300px;
     max-height: 300px;
@@ -446,12 +446,14 @@ textarea {
     font-size: 18px;
     padding: 83px 10px;
 }
-.tab-basic #form-group-logo .file-actions,
-.tab-basic #form-group-logo .input-group,
+.tab-basic #logo-form .file-actions,
+.tab-basic #logo-form .input-group,
 .tab-menu .input-group,
 .tab-menu .file-actions,
-.tab-team #image-team-form .input-group,
-.tab-team #image-team-form .file-actions {
+.tab-team #team-member-form .input-group,
+.tab-team #team-member-form .file-actions,
+.tab-template .input-group,
+.tab-template .file-actions {
     display: none;
 }
 .tab-menu .text-content {
