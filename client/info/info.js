@@ -5,7 +5,6 @@ imagesTypes = ['image/png','image/jpeg'];
 Template.Info.onRendered(function() {
   	$(".file-loading").fileinput({
       uploadUrl: "http://localhost/site/file-upload-batch",
-      allowedFileExtensions: ["jpg", "png", "gif"],
       minImageWidth: 10,
       minImageHeight: 10
   	});
@@ -46,15 +45,24 @@ Template.Info.events({
 
 	'click #btn-add-image': function() {
 	  var img = "<img src='images/image-test.jpg'>";
-	  var imgForm = "<div class='img-form col-md-4'>" + img + "</div>";
-    var description = $('#description').val();
-    var price = $('#description').val()
-    console.log(description + price);
-    var infoForm = "<div class='img-form col-md-8'><p>" + description + "</p><p>" + price +"</p></div>";
-    var showForm = "<div>" + imgForm + infoForm + "</div>";
-    $('.show-images .row').append(showForm);
-    $('#description').val("");
-    $('#price').val("");
+
+	  var imgMenu = "<div class='menu-image col-md-3'>" + img + "</div>";
+
+    var descriptionMenu = $('#description-menu').val();
+    var priceMenu = $('#price-menu').val()
+
+    if(descriptionMenu && priceMenu) {
+      var infoMenu = "<div class='menu-info col-md-8'><span>Description:</span><p class='menu-description'>" + descriptionMenu + "</p><span>Price:</span><p class='menu-price'>" + priceMenu +"</p></div>";
+
+      var showMenu = "<div class='row'>" + imgMenu + infoMenu + "</div>";
+      $('.show-menu .menu-content').append(showMenu);
+      $('#description-menu').val("");
+      $('#price-menu').val("");
+      $('.show-menu h3').show();
+    }
+    else {
+      alert("Please enter values");
+    }
 	},
 
 	'change #logo-input': function(e) {

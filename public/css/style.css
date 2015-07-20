@@ -480,8 +480,9 @@ textarea {
 .btn-publish {
     margin-top: 20px;
 }
-
-
+.show-menu h3 {
+    display: none;
+}
 
 
 
